@@ -1,6 +1,6 @@
 const HeaderCartButton = (props) => {
   return (
-    <button className="cursor-pointer border-none bg-[#4d1601] text-white px-12 py-3 flex justify-around items-center rounded-3xl font-bold hover:bg-[#2c0d00] active:bg-[#2c0d00]">
+    <button className="cursor-pointer border-none bg-[#4d1601] text-white px-12 py-3 flex justify-around items-center rounded-3xl font-bold hover:bg-[#2c0d00] active:bg-[#2c0d00] hover:scale-105 transition duration-300">
       <span className="w-[22px] h-[22px] mr-2">
         <svg
           xmlns="http://www.w3.org/2000/svg"
