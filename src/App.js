@@ -1,5 +1,12 @@
+import React from "react";
+import Header from "./components/Layout/Header";
+
 function App() {
-  return <div>hello from app!</div>;
+  return (
+    <div className="font-poppin">
+      <Header />
+    </div>
+  );
 }
 
 export default App;
