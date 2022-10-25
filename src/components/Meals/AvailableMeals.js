@@ -27,10 +27,10 @@ const DUMMY_MEALS = [
 
 const AvailableMeals = () => {
   return (
-    <section>
+    <section className="max-w-5xl w-[90%] my-8 mx-auto">
       <ul>
         {DUMMY_MEALS.map((data) => (
-          <li>{data.name}</li>
+          <li key={data.id}>{data.name}</li>
         ))}
       </ul>
     </section>
