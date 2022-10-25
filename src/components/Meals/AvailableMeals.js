@@ -1,3 +1,6 @@
+import Card from "../UI/Card";
+import MealItem from "./MealItem";
+
 const DUMMY_MEALS = [
   {
     id: "m1",
@@ -27,12 +30,17 @@ const DUMMY_MEALS = [
 
 const AvailableMeals = () => {
   return (
-    <section className="max-w-5xl w-[90%] my-8 mx-auto">
-      <ul>
-        {DUMMY_MEALS.map((data) => (
-          <li key={data.id}>{data.name}</li>
-        ))}
-      </ul>
+    <section className="max-w-4xl w-[90%] my-8 mx-auto">
+      <Card>
+        <ul>
+          {DUMMY_MEALS.map((data) => (
+            <div className="mb-4">
+              <MealItem key={data.id} meal={data} />
+              <hr />
+            </div>
+          ))}
+        </ul>
+      </Card>
     </section>
   );
 };
