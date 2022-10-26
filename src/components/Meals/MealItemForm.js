@@ -2,7 +2,7 @@ const MealItemForm = () => {
   return (
     <form>
       <div className="mb-2">
-        <label for="amount" className="font-bold text-sm mr-2">
+        <label htmlFor="amount" className="font-bold text-sm mr-2">
           Amount
         </label>
         <input
