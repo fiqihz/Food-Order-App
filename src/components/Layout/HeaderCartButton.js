@@ -1,4 +1,13 @@
+import { useContext } from "react";
+import CartContext from "../../store/cart-context";
+
 const HeaderCartButton = (props) => {
+  const cartCtx = useContext(CartContext);
+
+  const totalItems = cartCtx.items.reduce((curNumber, items) => {
+    return curNumber + items.amount;
+  }, 0);
+
   return (
     <button
       className="cursor-pointer border-none bg-[#4d1601] text-white px-12 py-3 flex justify-around items-center rounded-3xl font-bold hover:bg-[#2c0d00] active:bg-[#2c0d00] hover:scale-105 transition duration-300"
@@ -15,7 +24,7 @@ const HeaderCartButton = (props) => {
       </span>
       <span>Your Cart</span>
       <span className="ml-3 bg-[#b94517] px-4 py-1 rounded-full font-bold">
-        3
+        {totalItems}
       </span>
     </button>
   );
