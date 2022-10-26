@@ -34,8 +34,8 @@ const AvailableMeals = () => {
       <Card>
         <ul>
           {DUMMY_MEALS.map((data) => (
-            <div className="mb-4">
-              <MealItem key={data.id} meal={data} />
+            <div key={data.id} className="mb-4">
+              <MealItem meal={data} />
               <hr />
             </div>
           ))}
