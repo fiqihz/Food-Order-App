@@ -1,11 +1,24 @@
-const MealItemForm = () => {
+import { useRef } from "react";
+
+const MealItemForm = (props) => {
+  const amountInputRef = useRef();
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+    const enteredAmount = amountInputRef.current.value;
+    const enteredAmountNumber = +enteredAmount;
+
+    props.onAddToCart(enteredAmountNumber);
+  };
+
   return (
-    <form>
+    <form onSubmit={submitHandler}>
       <div className="mb-2">
         <label htmlFor="amount" className="font-bold text-sm mr-2">
           Amount
         </label>
         <input
+          ref={amountInputRef}
           id="amount"
           type="number"
           min="1"
@@ -16,7 +29,10 @@ const MealItemForm = () => {
         />
       </div>
       <div className="flex justify-end">
-        <button className="bg-[#8a2b06] px-8 py-1 rounded-full text-white font-bold hover:scale-105 hover:opacity-80 transition duration-300">
+        <button
+          type="submit"
+          className="bg-[#8a2b06] px-8 py-1 rounded-full text-white font-bold hover:scale-105 hover:opacity-80 transition duration-300"
+        >
           + Add
         </button>
       </div>

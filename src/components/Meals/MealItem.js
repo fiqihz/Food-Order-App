@@ -1,6 +1,19 @@
 import MealItemForm from "./MealItemForm";
+import { useContext } from "react";
+import CartContext from "../../store/cart-context";
 
 const MealItem = (props) => {
+  const cartCtx = useContext(CartContext);
+
+  const addToCartHandler = (amount) => {
+    cartCtx.addItem({
+      id: props.meal.id,
+      name: props.meal.name,
+      amount: amount,
+      price: props.meal.price,
+    });
+  };
+
   return (
     <li className="flex justify-between mb-2">
       <div>
@@ -11,7 +24,7 @@ const MealItem = (props) => {
         </div>
       </div>
       <div className="flex items-center">
-        <MealItemForm />
+        <MealItemForm onAddToCart={addToCartHandler} />
       </div>
     </li>
   );
