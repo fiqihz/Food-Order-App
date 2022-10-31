@@ -34,7 +34,7 @@ const MealItemForm = (props) => {
       <div className="flex justify-end">
         <button
           type="submit"
-          className="bg-[#8a2b06] text-sm px-4 py-1 sm:px-6 md:px-8 md:py-2 md:font-bold md:text-base rounded-full text-white font-semibold hover:scale-105 hover:opacity-80 transition duration-300"
+          className="bg-slate-700 text-sm px-4 py-1 sm:px-6 md:px-8 md:py-2 md:font-bold md:text-base rounded-full text-white font-semibold hover:scale-105 hover:opacity-80 transition duration-300"
         >
           + Add
         </button>

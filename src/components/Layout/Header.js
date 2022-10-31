@@ -5,8 +5,8 @@ import HeaderCartButton from "./HeaderCartButton";
 const Header = (props) => {
   return (
     <React.Fragment>
-      <header className="fixed top-0 left-0 w-full h-16 bg-[#8a2b06] text-white flex justify-between items-center py-3 px-4 z-10 sm:px-10 md:px-20 lg:h-20">
-        <h1 className="font-bold text-xl sm:text-2xl md:text-3xl">
+      <header className="fixed top-0 left-0 w-full h-16 bg-slate-500 text-white flex justify-between items-center py-3 px-4 z-10 sm:px-10 md:px-20 lg:h-20">
+        <h1 className="font-bold text-xl sm:text-2xl md:text-3xl ">
           MunjulMeals
         </h1>
         <HeaderCartButton handleShowCart={props.handleShowCart} />

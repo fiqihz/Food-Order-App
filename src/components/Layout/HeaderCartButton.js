@@ -10,7 +10,7 @@ const HeaderCartButton = (props) => {
 
   return (
     <button
-      className="cursor-pointer border-none bg-[#4d1601] text-white flex justify-around items-center rounded-3xl font-bold hover:bg-[#2c0d00] active:bg-[#2c0d00] hover:scale-105 transition duration-300 px-3 py-2 sm:px-6 md:px-8 lg:px-12 lg:py-3"
+      className="cursor-pointer border-none bg-slate-700 text-white flex justify-around items-center rounded-3xl font-bold hover:bg-[#2c0d00] active:bg-[#2c0d00] hover:scale-105 transition duration-300 px-3 py-2 sm:px-6 md:px-8 lg:px-12 lg:py-3"
       onClick={props.handleShowCart}
     >
       <span className="w-3 h-3 mr-1 sm:w-4 sm:h-4 md:w-5 md:h-5 sm:mr-2 lg:w-6 lg:h-6 lg:mr-3">
@@ -23,7 +23,7 @@ const HeaderCartButton = (props) => {
         </svg>
       </span>
       <span className="text-sm md:text-base">Your Cart</span>
-      <span className="ml-2 bg-[#b94517] px-2 py-[2px] rounded-full font-bold md:ml-3">
+      <span className="ml-2 bg-slate-500 px-2 py-[2px] rounded-full font-bold md:ml-3">
         {totalItems}
       </span>
     </button>
