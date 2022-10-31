@@ -17,9 +17,13 @@ const MealItem = (props) => {
   return (
     <li className="flex justify-between mb-2">
       <div>
-        <h3 className="font-bold text-xl ">{props.meal.name}</h3>
-        <div className="italic">{props.meal.description}</div>
-        <div className="font-bold text-xl text-indigo-300 mb-2">
+        <h3 className="font-bold text-base sm:text-lg md:text-xl">
+          {props.meal.name}
+        </h3>
+        <div className="italic text-sm sm:text-base md:text-lg">
+          {props.meal.description}
+        </div>
+        <div className="font-bold text-base sm:text-lg md:text-xl text-indigo-300 mb-2">
           ${props.meal.price}
         </div>
       </div>

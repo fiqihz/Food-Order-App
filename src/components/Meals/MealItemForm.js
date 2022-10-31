@@ -14,7 +14,10 @@ const MealItemForm = (props) => {
   return (
     <form onSubmit={submitHandler}>
       <div className="mb-2">
-        <label htmlFor="amount" className="font-bold text-sm mr-2">
+        <label
+          htmlFor="amount"
+          className="font-bold text-xs sm:text-sm md:text-base sm:mr-2 mr-6"
+        >
           Amount
         </label>
         <input
@@ -25,13 +28,13 @@ const MealItemForm = (props) => {
           max="5"
           step="1"
           defaultValue="1"
-          className="border w-[50px] px-1 py-1 rounded-lg text-center"
+          className="border w-[30px] sm:w-[40px] rounded-lg text-center"
         />
       </div>
       <div className="flex justify-end">
         <button
           type="submit"
-          className="bg-[#8a2b06] px-8 py-1 rounded-full text-white font-bold hover:scale-105 hover:opacity-80 transition duration-300"
+          className="bg-[#8a2b06] text-sm px-4 py-1 sm:px-6 md:px-8 md:py-2 md:font-bold md:text-base rounded-full text-white font-semibold hover:scale-105 hover:opacity-80 transition duration-300"
         >
           + Add
         </button>
