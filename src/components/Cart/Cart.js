@@ -7,9 +7,13 @@ const Cart = (props) => {
   const cartCtx = useContext(CartContext);
   const checkItems = cartCtx.items.length > 0;
 
-  const addItemHandler = (item) => {};
+  const addItemHandler = (item) => {
+    cartCtx.addItem(item);
+  };
 
-  const removeItemHandler = (id) => {};
+  const removeItemHandler = (id) => {
+    cartCtx.removeItem(id);
+  };
 
   const cartItems = (
     <ul className="m-0 p-0 max-h-60 overflow-auto font-semibold text-lg mb-4">
@@ -17,8 +21,8 @@ const Cart = (props) => {
         <CartItem
           key={item.id}
           item={item}
-          onAddItem={addItemHandler.bind(null, item.id)}
-          onRemoveItem={removeItemHandler.bind(null, item)}
+          onAddItem={addItemHandler.bind(null, item)}
+          onRemoveItem={removeItemHandler.bind(null, item.id)}
         />
       ))}
     </ul>
