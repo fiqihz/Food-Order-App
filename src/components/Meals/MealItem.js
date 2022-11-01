@@ -23,7 +23,7 @@ const MealItem = (props) => {
         <div className="italic text-sm sm:text-base md:text-lg">
           {props.meal.description}
         </div>
-        <div className="font-bold text-base sm:text-lg md:text-xl text-indigo-300 mb-2">
+        <div className="font-bold text-base sm:text-lg md:text-xl text-orange-300 mb-2">
           ${props.meal.price}
         </div>
       </div>
